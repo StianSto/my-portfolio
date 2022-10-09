@@ -54,3 +54,23 @@ function clickToCopy() {
     this.classList.add("copied");
     setTimeout(() => this.classList.remove("copied"), 5000)
 }
+
+// age
+
+
+
+function calculateAge() {
+
+    const birthDate = new Date("1995, 06, 23");
+    const today = new Date();
+
+    const years = today.getFullYear() - birthDate.getFullYear();
+    if (today.getMonth() < birthDate.getMonth()) return years - 1;
+    if (today.getMonth() === birthDate.getMonth() && 
+        today.getDate() < birthDate.getDate()) return years - 1;
+
+    return years;
+}
+
+const age = document.querySelector("#my-age");
+age.innerText = calculateAge();
