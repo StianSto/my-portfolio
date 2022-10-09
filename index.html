@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/6430c8691d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/index.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <div id="logo"><img src="assets/mypage-logo.svg" alt=""><span>Stian Stordal</span></div>
+        <button class="btn | clr-accent-cta"  data-scroll-To="contact">Get in touch</button>
+        <button id="primary-nav"><img src="assets/menu.svg" alt=""></button>
+    </header>
+    <main>
+        <section class="landing-page">
+            <h1>Making <span style="color: var(--clr-accent-1)">Limitless</span><br>Ideas <span style="color: var(--clr-accent-2)">Possible</span></h1>
+            <div class="landing__nav-links">
+                <button class="btn" data-scroll-To="my-projects">Check out my projects!</button>
+                <button class="btn clr-accent-cta" data-scroll-To="contact"><b>Get in touch</b></button>
+            </div>
+            <div class="landing_background">
+            </div>
+        </section>
+        <section class="about-me | padding-inline">
+            <h2>About me</h2>
+            <div class="about-me__container | max-width-800">
+                <div class="about-me__descrp">
+                    <p>Hi! My name is Stian. I am a <b>Front-End Developer</b> with a passion for combining creativity and logic. I am a Norwegian 27-year old, and i speak scandinavian languages and english fluently.</p>
+                    <p>I value teamwork and discipline above all else and I like to work with people who have the same interest in their work as i do, and love what they do as much as i do.</p>
+                    <p>As a developer i have an unquenchable thirst for knowledge and hav a need for continously expanding my knwoledge in my field. I like working with CSS and JS an have taken a interest in working with animations.</p>
+                    <button class="btn | clr-accent-cta"  data-scroll-To="contact">Get in Touch >></button>
+                </div>
+                <div class="about-me__profile">
+                    <div class="clipped"></div>
+                    <!-- <img src="assets/profile-picture-blob.svg" alt=""> -->
+                </div>
+            </div>
+            <div class="about-me__my-skills max-width-800 center section-space-top">
+                <div data-skill-logo="html"></div>
+                <div data-skill-logo="css"></div>
+                <div data-skill-logo="js"></div>
+                <div data-skill-logo="git"></div>
+                <div data-skill-logo="wp"></div>
+            </div>
+        </section>
+        <section class="projects-section">
+            <h2 class="max-width-1200 center">My Projects</h2>
+            <div class="projects-container | max-width-1200 center">
+                <div class="project project--reverse">
+                    <div class="project--site-img">
+                        <img class="project-vector mac-vector" src="assets/macbook-vector-csm.svg" alt="">
+                        <img class="project-vector iphone-vector" src="assets/iphone-vector-csm.svg" alt="">
+                    </div>
+                    <div class="project--descrp">
+                        <h3>Community Science Museum</h3>
+                        <p>CSM is a (fictional) local science museum meant for children interested in science and learning how the world works. The website seeks to intrigue children to learn more and opens up for visiting the museum. the design is colorful, but not childish.</p>
+                        <div class="project-buttons">
+                            <a href="#" class="btn | clr-accent-cta">Visit Site</a>
+                            <a href="#" class="btn | link-project clr-a">view project</a>
+                        </div>
+                    </div> 
+                </div>
+                <div class="project">
+                    <div class="project--site-img">
+                        <img class="project-vector mac-vector" src="assets/macbook-vector-rainydays.svg" alt="">
+                        <img class="project-vector iphone-vector" src="assets/iphone-vector-rainydays.svg" alt="">
+                    </div>
+                    <div class="project--descrp">
+                        <h3>Rainy Days</h3>
+                        <p>One of my first large projects during my time at Noroff. Rainy Days is an e-commerce site specifically designed for ages 30+ who want to go outdoors. was origially written with only HTML and CSS, but has since then been updated with JS.</p>
+                        <div class="project-buttons">
+                            <a href="https://rainydays-ss.netlify.app" class="btn | clr-accent-cta">Visit Site</a>
+                            <a href="https://github.com/StianSto/CrossCourse-assignment" class="btn | link-project clr-a">view project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="get-in-touch | max-width-800 center padding-inline">
+            <h2>Get in Touch</h2>
+            <div class="get-in-touch__container | container">
+                <div class="contact-info__container | container flex-column">
+                    <div class="contact-info"><i style="transform: rotateY(180deg)" class="fa fa-solid fa-phone"></i><span class="contact-info--phone">+47 954 59 687</span></div>
+                    <div class="contact-info "><i class="fa fa-solid fa-envelope"></i><span class="contact-info--email">stordalstian@gmail.com</span></div>
+                </div>
+                <a href="https://github.com/StianSto" class="my-pages">
+                    <div class="| container">
+                        <img src="assets/git.svg" alt="">
+                        <p>My Github</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; copyright. All rights reserved</p>
+    </footer>
+</body>
+</html>
