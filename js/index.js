@@ -14,10 +14,7 @@ window.addEventListener('scroll', () =>  {
 });
 
 
-
-
 // show text under skill logos 
-
 const skillLogos = document.querySelectorAll("[data-skill-logo]")
 
 skillLogos.forEach( logo => logo.addEventListener("mouseover", () => { logo.classList.add("show-skill-text") }))
@@ -55,22 +52,23 @@ function clickToCopy() {
     setTimeout(() => this.classList.remove("copied"), 5000)
 }
 
+
 // age
-
-
-
 function calculateAge() {
-
     const birthDate = new Date("1995, 06, 23");
     const today = new Date();
+    
+    const years = Date.parse(today.getFullYear()) - Date.parse(birthDate.getFullYear());
+    const months = Date.parse(today.getMonth()) - Date.parse(birthDate.getMonth());
+    let beforeOrAfterBirthday;
 
-    const years = today.getFullYear() - birthDate.getFullYear();
-    if (today.getMonth() < birthDate.getMonth()) return years - 1;
-    if (today.getMonth() === birthDate.getMonth() && 
-        today.getDate() < birthDate.getDate()) return years - 1;
+    today.getMonth() === birthDate.getMonth() && 
+    today.getDate() < birthDate.getDate() ? beforeOrAfterBirthday = -1 : beforeOrAfterBirthday = 0;
 
-    return years;
+    const msToYear = 1000 * 60 * 60 * 24 * 365;
+    return Math.floor((years + months) / msToYear) + beforeOrAfterBirthday; 
 }
 
 const age = document.querySelector("#my-age");
 age.innerText = calculateAge();
+console.log(calculateAge())
