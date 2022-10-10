@@ -22,16 +22,21 @@ skillLogos.forEach( logo => logo.addEventListener("mouseleave", () => { logo.cla
 
 
 /* scroll to */
-const myProjects = document.querySelector(".projects-section");
-const scrollToProjects = document.querySelector('[data-scroll-to="my-projects"]')
+const scrollToAboutMe = document.querySelectorAll('[data-scroll-to="about-me"]')
+const scrollToProjects = document.querySelectorAll('[data-scroll-to="my-projects"]')
 const scrollToContact = document.querySelectorAll('[data-scroll-to="contact"]');
+const aboutMe = document.querySelector(".about-me");
+const myProjects = document.querySelector(".projects-section");
 const contact = document.querySelector(".get-in-touch")
 
-scrollToProjects.onclick = () => myProjects.scrollIntoView({
-    behavior: "smooth",
-    block: "start"
-})
 
+
+scrollToProjects.forEach( btn => {
+    btn.onclick = () => myProjects.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    })
+})
 scrollToContact.forEach( btn => {
     btn.onclick = () => contact.scrollIntoView({
         behavior: "smooth",
@@ -39,6 +44,12 @@ scrollToContact.forEach( btn => {
     })
 })
 
+scrollToAboutMe.forEach(btn => {
+    btn.onclick = () => aboutMe.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    })
+})
 
 /* click to copy */
 const email = document.querySelector(".contact-info--email");
@@ -60,8 +71,8 @@ function calculateAge() {
     
     const years = Date.parse(today.getFullYear()) - Date.parse(birthDate.getFullYear());
     const months = Date.parse(today.getMonth()) - Date.parse(birthDate.getMonth());
+    
     let beforeOrAfterBirthday;
-
     today.getMonth() === birthDate.getMonth() && 
     today.getDate() < birthDate.getDate() ? beforeOrAfterBirthday = -1 : beforeOrAfterBirthday = 0;
 
@@ -71,4 +82,30 @@ function calculateAge() {
 
 const age = document.querySelector("#my-age");
 age.innerText = calculateAge();
-console.log(calculateAge())
+
+
+
+// show primary nav 
+const navBtn = document.querySelector(".nav-btn")
+const navBtnclose = document.querySelector("#close-primary-nav")
+const primaryNav = document.querySelector("#primary-nav")
+
+navBtn.addEventListener("click", () => primaryNav.style.translate = "0 0" );
+navBtnclose.addEventListener("click", () => primaryNav.style.translate = "calc(100% + 60px) 0" )
+
+
+/* animate job titles */
+const jobTitles = document.querySelector(".work-title");
+// const offset = jobTitles.style.get
+console.dir(jobTitles)
+// jobTitles.style.setProperty("--offset", -100 + "%")
+
+let count = 100;
+function cycleThrough() {
+    console.log(2)
+    jobTitles.style.setProperty("--offset", - count + "%")
+    count === 200 ? count = 0 : count += 100;
+    console.log(count)
+}
+
+setInterval(cycleThrough, 3000)

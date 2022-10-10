@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text-html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -16,16 +16,40 @@
     <header>
         <div id="logo"><img src="assets/mypage-logo.svg" alt=""><span>Stian Stordal</span></div>
         <button class="btn | clr-accent-cta"  data-scroll-To="contact">Get in touch</button>
-        <button id="primary-nav"><img src="assets/menu.svg" alt=""></button>
+        <button class="nav-btn btn"><img src="assets/menu.svg" alt=""></button>
     </header>
+    <div id="primary-nav">
+        <div>
+            <p>Sections</p>
+            <ul>
+                <li data-scroll-To="about-me">About me</li>
+                <li data-scroll-To="my-projects">Projects</li>
+                <li data-scroll-To="contact">Get in Touch</li>
+            </ul>
+        </div>
+        <div>
+            <p>Other</p>
+            <ul id="primary-nav--other">
+                <li class="git"><a href="https://github.com/StianSto"><img src="assets/git-white.svg" alt="">Github</a></li>
+            </ul>
+        </div>
+        <button id="close-primary-nav" class="btn"><i class="fa fa-solid fa-chevron-right"></i></button>
+    </div>
     <main>
         <section class="landing-page">
-            <h1>Making <span style="color: var(--clr-accent-1)">Limitless</span><br>Ideas <span style="color: var(--clr-accent-2)">Possible</span></h1>
-            <div class="landing__nav-links">
-                <button class="btn" data-scroll-To="my-projects">Check out my projects!</button>
-                <button class="btn clr-accent-cta" data-scroll-To="contact"><b>Get in touch</b></button>
-            </div>
             <div class="landing_background">
+            </div>
+            <h1>Hello There 👋 <br>
+                I am Stian, <br>
+                <div class="work-title">
+                    <div style="color: var(--clr-accent-1)">Front-End Developer</div>
+                    <div style="color: var(--clr-accent-2)">Designer</div>
+                    <div style="color: var(--clr-accent-cta)">Just a Nice Guy Overall</div>
+                </div>
+            </h1>
+            <div class="landing__nav-links">
+                <button class="btn btn--tactile" data-scroll-To="my-projects">Check out my projects!</button>
+                <button class="btn btn--tactile | clr-accent-cta" data-scroll-To="contact"><b>Get in touch</b></button>
             </div>
         </section>
         <section class="about-me | padding-inline">
@@ -34,8 +58,8 @@
                 <div class="about-me__descrp">
                     <p>Hi! My name is Stian. I am a <b>Front-End Developer</b> with a passion for combining creativity and logic. I am a Norwegian <span id="my-age"></span>-year old, and i speak scandinavian languages and english fluently.</p>
                     <p>I value teamwork and discipline above all else and I like to work with people who have the same interest in their work as i do, and love what they do as much as i do.</p>
-                    <p>As a developer i have an unquenchable thirst for knowledge and hav a need for continously expanding my knwoledge in my field. I like working with CSS and JS an have taken a interest in working with animations.</p>
-                    <button class="btn | clr-accent-cta"  data-scroll-To="contact">Get in Touch >></button>
+                    <p>As a developer i have an unquenchable thirst for knowledge and have a need for continously expanding my knowledge in my field. I like working with CSS and JS an have taken a interest in working with animations.</p>
+                    <button class="btn | clr-accent-cta"  data-scroll-To="contact">Get in Touch</button>
                 </div>
                 <div class="about-me__profile">
                     <div class="clipped"></div>

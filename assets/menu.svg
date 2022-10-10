@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="90" height="68" viewBox="0 0 90 68">
-  <g id="Group_68" data-name="Group 68" transform="translate(-1786 -43)">
-    <rect id="Rectangle_49" data-name="Rectangle 49" width="90" height="13" transform="translate(1786 43)" fill="#fff"/>
-    <rect id="Rectangle_50" data-name="Rectangle 50" width="60" height="14" transform="translate(1816 70)" fill="#fff"/>
-    <rect id="Rectangle_51" data-name="Rectangle 51" width="30" height="13" transform="translate(1846 98)" fill="#fff"/>
-  </g>
-</svg>
+<?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 54">
+<defs>
+<style>
+.cls-1{fill:#fff;}
+
+</style>
+</defs><path id="Rectangle_49" class="cls-1" d="M5,0H85c2.76,0,5,2.24,5,5h0c0,2.76-2.24,5-5,5H5C2.24,10,0,7.76,0,5H0C0,2.24,2.24,0,5,0Z"/><path id="Rectangle_65" class="cls-1" d="M35,22h50c2.76,0,5,2.24,5,5h0c0,2.76-2.24,5-5,5H35c-2.76,0-5-2.24-5-5h0c0-2.76,2.24-5,5-5Z"/><path id="Rectangle_66" class="cls-1" d="M65,44h20c2.76,0,5,2.24,5,5h0c0,2.76-2.24,5-5,5h-20c-2.76,0-5-2.24-5-5h0c0-2.76,2.24-5,5-5Z"/></svg>
