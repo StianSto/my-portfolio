@@ -1,11 +1,14 @@
 import { parallax } from "./functions/parallax.js";
 import { hideHeader } from "./functions/hide-header.js";
 
-const phoneVector = document.querySelectorAll(".iphone-vector");
-const macVector = document.querySelectorAll(".mac-vector");
+window.onbeforeunload = () =>  window.scrollTo(0, 0)
+
+
+
 
 window.addEventListener('scroll', () =>  {
 
+    
     phoneVector.forEach( el => parallax(el, 12));
     macVector.forEach( el => parallax(el, 4));
 
@@ -22,13 +25,13 @@ skillLogos.forEach( logo => logo.addEventListener("mouseleave", () => { logo.cla
 
 
 /* scroll to */
+const landingPage= document.querySelector('.landing-page')
 const scrollToAboutMe = document.querySelectorAll('[data-scroll-to="about-me"]')
 const scrollToProjects = document.querySelectorAll('[data-scroll-to="my-projects"]')
 const scrollToContact = document.querySelectorAll('[data-scroll-to="contact"]');
 const aboutMe = document.querySelector(".about-me");
 const myProjects = document.querySelector(".projects-section");
 const contact = document.querySelector(".get-in-touch")
-
 
 
 scrollToProjects.forEach( btn => {
@@ -96,16 +99,58 @@ navBtnclose.addEventListener("click", () => primaryNav.style.translate = "calc(1
 
 /* animate job titles */
 const jobTitles = document.querySelector(".work-title");
-// const offset = jobTitles.style.get
-console.dir(jobTitles)
-// jobTitles.style.setProperty("--offset", -100 + "%")
 
 let count = 100;
 function cycleThrough() {
-    console.log(2)
     jobTitles.style.setProperty("--offset", - count + "%")
     count === 200 ? count = 0 : count += 100;
-    console.log(count)
 }
 
 setInterval(cycleThrough, 3000)
+
+
+// svg test 
+import { createSvgMac } from "./functions/create-svg_mac.js";
+import { createSvgPhone } from "./functions/create-svg_iphone.js";
+import { projectsArr } from "./library/projects.js";
+const projectsContainer = document.querySelector(".projects-container");
+let phoneVector;
+let macVector;
+
+function addProjects() {
+    for(let i = 0; i < projectsArr.length; i++) {
+        let project = document.createElement("div");
+        project.classList.add("project")
+
+        let projectSvgMac = createSvgMac(projectsArr[i], i)
+        let projectSvgPhone = createSvgPhone(projectsArr[i], i)
+
+        project.innerHTML = `
+        <div class="project--site-img">
+            ${projectSvgMac}
+            ${projectSvgPhone}
+        </div>
+        <div class="project--descrp">
+            <h3>${projectsArr[i].title}</h3>
+            <p>${projectsArr[i].descr}</p>
+            <div class="project-buttons">
+                <a href="${projectsArr[i].link}" class="btn | clr-accent-cta">Visit Site</a>
+                <a href="${projectsArr[i].githubLink}" class="btn | link-project clr-a">view project</a>
+            </div>
+        </div> 
+        `
+        projectsContainer.appendChild(project)
+    }
+    console.log(projectsContainer)
+    phoneVector = document.querySelectorAll(".iphone-vector");
+    macVector = document.querySelectorAll(".mac-vector");
+}
+addProjects();
+
+
+
+
+// createSvgMac("/assets/csm-scrn-macbook.jpg", projectImageContainers[0], 1)
+// createSvgMac("/assets/project-img_rainydays-pc.jpg", projectImageContainers[1], 2)
+
+
