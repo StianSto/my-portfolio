@@ -20,8 +20,8 @@ const rainyDays = {
 }
 const theDailyBrew = {
     title: "The Daily Brew",
-    descr: "The Daily Brew is a blog for coffee lovers and enthusiast. This website was made as my exam project during my first year at Noroff. making the website challenged me to explore the world of JS more than ever before.",
-    link: "https://condescending-pike-cf9508.netlify.app",
+    descr: "The Daily Brew is a blog for coffee lovers and -enthusiasts. This website was made as my exam project during my first year at Noroff. making the website challenged me to explore the world of JS more than ever before.",
+    link: "https://thedailybrew.netlify.app",
     githubLink: "https://github.com/Noroff-FEU-Assignments/project-exam-1-StianSto",
     images: {
         pc: "/assets/images/thedailybrew-scrn_macbook.jpg",
