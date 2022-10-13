@@ -8,9 +8,13 @@ window.onbeforeunload = () =>  window.scrollTo(0, 0)
 
 window.addEventListener('scroll', () =>  {
 
-    
+    if(window.innerWidth > 500) {
     phoneVector.forEach( el => parallax(el, 12));
     macVector.forEach( el => parallax(el, 4));
+    } else {
+        phoneVector.forEach( el => parallax(el, 0));
+        macVector.forEach( el => parallax(el, 0));
+    }
 
     const navbar = document.querySelector("header");
     hideHeader(navbar);
@@ -109,48 +113,43 @@ function cycleThrough() {
 setInterval(cycleThrough, 3000)
 
 
-// svg test 
+// projects section: add projects titles, description and svg's including images
 import { createSvgMac } from "./functions/create-svg_mac.js";
 import { createSvgPhone } from "./functions/create-svg_iphone.js";
 import { projectsArr } from "./library/projects.js";
+
 const projectsContainer = document.querySelector(".projects-container");
 let phoneVector;
 let macVector;
 
+
 function addProjects() {
-    for(let i = 0; i < projectsArr.length; i++) {
-        let project = document.createElement("div");
+
+    projectsArr.forEach( (project, i) => {
+        project = document.createElement("div");
         project.classList.add("project")
 
         let projectSvgMac = createSvgMac(projectsArr[i], i)
         let projectSvgPhone = createSvgPhone(projectsArr[i], i)
 
         project.innerHTML = `
-        <div class="project--site-img">
-            ${projectSvgMac}
-            ${projectSvgPhone}
-        </div>
-        <div class="project--descrp">
-            <h3>${projectsArr[i].title}</h3>
-            <p>${projectsArr[i].descr}</p>
-            <div class="project-buttons">
-                <a href="${projectsArr[i].link}" class="btn | clr-accent-cta">Visit Site</a>
-                <a href="${projectsArr[i].githubLink}" class="btn | link-project clr-a">view project</a>
+            <div class="project--site-img">
+                ${projectSvgMac}
+                ${projectSvgPhone}
             </div>
-        </div> 
+            <div class="project--descrp">
+                <h3>${projectsArr[i].title}</h3>
+                <p>${projectsArr[i].descr}</p>
+                <div class="project-buttons">
+                    <a href="${projectsArr[i].link}" class="btn | clr-accent-cta">Visit Site</a>
+                    <a href="${projectsArr[i].githubLink}" class="btn | link-project clr-a">view project</a>
+                </div>
+            </div> 
         `
         projectsContainer.appendChild(project)
-    }
-    console.log(projectsContainer)
+    })
+
     phoneVector = document.querySelectorAll(".iphone-vector");
     macVector = document.querySelectorAll(".mac-vector");
 }
 addProjects();
-
-
-
-
-// createSvgMac("/assets/csm-scrn-macbook.jpg", projectImageContainers[0], 1)
-// createSvgMac("/assets/project-img_rainydays-pc.jpg", projectImageContainers[1], 2)
-
-
