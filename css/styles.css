@@ -424,6 +424,7 @@ h1, h1 span {
     display: flex;
     flex-direction: column;
     gap: clamp(5rem, 30vw, 10rem);
+    max-width: clamp(0px, 80vw, 1400px);
 }
 
 .project {
@@ -439,12 +440,13 @@ h1, h1 span {
 .project:nth-child(odd) {flex-direction: row-reverse;}
 
 .project--site-img {
+    position: relative;
     flex: 3;
     order: 2;
+    align-self: start;
     min-width: 250px;
     width: 100%;
-    align-self: start;
-    position: relative;
+    margin-block: auto;
 }
 
 .project-vector,
