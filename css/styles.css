@@ -12,7 +12,9 @@
     
     --fs-h1: clamp(2rem, 5vw + 0.5rem, 6rem);
     --fs-h2: clamp(2rem, 3.5vw, 5rem);
+    --fs-h2-smaller: clamp(2rem, 2.5vw, 4rem);
     --fs-h3: clamp(1.5rem, 1.5vw + 0.5rem, 2rem);
+    --fs-h3-smaller: clamp(1.5rem, 1.5vw + 0.5rem, 2rem);
     --fs-paragraph: clamp(16px, 1vw + 0.5rem, 1.125rem);
 
 }
@@ -118,6 +120,7 @@ header {
     white-space: nowrap;
     align-self: center;
     font-size: var(--fs-h3);
+    margin-left: 1rem;
 }
 
 header .btn:nth-of-type(1) {
@@ -153,13 +156,17 @@ header .btn:nth-of-type(1) {
     filter: drop-shadow(-2px 0 0px  #0de9e9) drop-shadow(-2px 0 5px  #0de9e930);
 }
 
+#primary-nav > div:not(:first-child) {
+    margin-top: 2rem
+}
+
 #primary-nav li,
 #primary-nav p {
     color: var(--clr-main-primary);
     font-size: var(--fs-h3);
 }
 
-#primary-nav li {
+#primary-nav li, #primary-nav a {
     color: white; 
     list-style-type: none;
     font-size: calc( var(--fs-h3) - 0.25em );
@@ -270,7 +277,7 @@ h1, h1 span {
 
 /*About me*/
 .about-me {
-    padding-block: 5rem 10rem;
+    padding-block: max(5rem, 10vh) max(10rem, 20vh);
     position: relative;
 }
 
@@ -512,7 +519,7 @@ h1, h1 span {
 .contact-info, .container p {font-size: smaller;}
 .get-in-touch .fa {
     color: var(--clr-main-primary);
-    font-size: var(--fs-h2);
+    font-size: var(--fs-h2-smaller);
 }
 .contact-info, .my-pages .container {
     display: flex;
@@ -561,7 +568,7 @@ h1, h1 span {
 }
 
 
-.my-pages img{width: var(--fs-h2);}
+.my-pages img{width: var(--fs-h2-smaller);}
 
 
 /* footer */
@@ -583,6 +590,10 @@ footer p {
 @media only screen and (max-width: 800px){
     .project {
         flex-flow: column nowrap!important;
+    }
+
+    .landing-page {
+        padding-left: 5%;
     }
 }
 @media only screen and (max-width: 500px){
