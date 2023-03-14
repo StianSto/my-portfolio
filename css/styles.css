@@ -602,3 +602,24 @@ footer p {
     }
 }
 
+#contact {
+	margin-inline: auto;
+	max-width: 800px;
+}
+
+#contact form {
+	max-width: 500px;
+}
+
+#contact input {
+	padding: 0.5rem;
+}
+
+#contact form button[type='submit']{
+	margin-top: 0.5rem;
+}
+
+.form-control {
+	display: flex;
+	flex-direction: column
+}
