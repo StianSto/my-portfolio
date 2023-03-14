@@ -1,104 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta http-equiv="content-type" content="text-html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stian Stordal |  FrontEnd Developer</title>
-    <script src="https://kit.fontawesome.com/6430c8691d.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+  <head>
+    <meta http-equiv="content-type" content="text-html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stian Stordal | FrontEnd Developer</title>
+    <script
+      src="https://kit.fontawesome.com/6430c8691d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
     <script src="js/index.js" type="module"></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div id="logo">
-            <!-- <img src="assets/icons/mypage-logo.svg" alt=""> -->
-            <span>Stian Stordal</span>
-        </div>
-        <button class="btn btn--get-in-touch | clr-accent-cta"  data-scroll-To="contact">Get in touch</button>
-        <button class="nav-btn btn"><img src="assets/icons/menu.svg" alt=""></button>
+      <div id="logo">
+        <!-- <img src="assets/icons/mypage-logo.svg" alt=""> -->
+        <span>Stian Stordal</span>
+      </div>
+      <button
+        class="btn btn--get-in-touch | clr-accent-cta"
+        data-scroll-To="contact"
+      >
+        Get in touch
+      </button>
+      <button class="nav-btn btn">
+        <img src="assets/icons/menu.svg" alt="" />
+      </button>
     </header>
     <div id="primary-nav">
-        <div>
-            <p>Sections</p>
-            <ul>
-                <li data-scroll-To="about-me">About me</li>
-                <li data-scroll-To="my-projects">Projects</li>
-                <li data-scroll-To="contact">Get in Touch</li>
-            </ul>
-        </div>
-        <div>
-            <p>Other</p>
-            <ul id="primary-nav--other">
-                <li class="git"><a href="https://github.com/StianSto"><img src="assets/icons/git-white.svg" alt="">Github</a></li>
-            </ul>
-        </div>
-        <button id="close-primary-nav" class="btn"><i class="fa fa-solid fa-chevron-right"></i></button>
+      <div>
+        <p>Sections</p>
+        <ul>
+          <li data-scroll-To="about-me">About me</li>
+          <li data-scroll-To="my-projects">Projects</li>
+          <li data-scroll-To="contact">Get in Touch</li>
+        </ul>
+      </div>
+      <div>
+        <p>Other</p>
+        <ul id="primary-nav--other">
+          <li class="git">
+            <a href="https://github.com/StianSto"
+              ><img src="assets/icons/github-white.svg" alt="" />Github</a
+            >
+          </li>
+        </ul>
+      </div>
+      <button id="close-primary-nav" class="btn">
+        <i class="fa fa-solid fa-chevron-right"></i>
+      </button>
     </div>
     <main>
-        <section class="landing-page">
-            <div class="landing_background">
+      <section class="landing-page">
+        <div class="landing_background"></div>
+        <h1>
+          Hello There 👋 <br />
+          I am Stian, <br />
+          <div class="work-title">
+            <div style="color: var(--clr-accent-1)">Front-End Developer</div>
+            <div style="color: var(--clr-accent-2)">Designer</div>
+            <div style="color: var(--clr-accent-cta)">
+              Just a Nice Guy Overall
             </div>
-            <h1>Hello There 👋 <br>
-                I am Stian, <br>
-                <div class="work-title">
-                    <div style="color: var(--clr-accent-1)">Front-End Developer</div>
-                    <div style="color: var(--clr-accent-2)">Designer</div>
-                    <div style="color: var(--clr-accent-cta)">Just a Nice Guy Overall</div>
-                </div>
-            </h1>
-            <div class="landing__nav-links">
-                <button class="btn btn--tactile" data-scroll-To="my-projects">Check out my projects!</button>
-                <button class="btn btn--tactile | clr-accent-cta" data-scroll-To="contact"><b>Get in touch</b></button>
+          </div>
+        </h1>
+        <div class="landing__nav-links">
+          <button class="btn btn--tactile" data-scroll-To="my-projects">
+            Check out my projects!
+          </button>
+          <button
+            class="btn btn--tactile | clr-accent-cta"
+            data-scroll-To="contact"
+          >
+            <b>Get in touch</b>
+          </button>
+        </div>
+      </section>
+      <section class="about-me | padding-inline">
+        <h2>About me</h2>
+        <div class="about-me__container | max-width-800">
+          <div class="about-me__descrp">
+            <p>
+              Hi! My name is Stian. I am a <b>Front-End Developer</b> with a
+              passion for combining creativity and logic. I am a Norwegian
+              <span id="my-age"></span>-year old, and i speak scandinavian
+              languages and english fluently.
+            </p>
+            <p>
+              I value teamwork and discipline above all else and I like to work
+              with people who have the same interest in their work as i do, and
+              love what they do as much as i do.
+            </p>
+            <p>
+              As a developer i have an unquenchable thirst for knowledge and
+              have a need for continously expanding my knowledge in my field. I
+              like working with CSS and JS and have taken a interest in working
+              with animations.
+            </p>
+            <button class="btn | clr-accent-cta" data-scroll-To="contact">
+              Get in Touch
+            </button>
+          </div>
+          <div class="about-me__profile">
+            <div class="clipped"></div>
+            <!-- <img src="assets/profile-picture-blob.svg" alt=""> -->
+          </div>
+        </div>
+        <div class="about-me__my-skills max-width-800 center section-space-top">
+          <div data-skill-logo="html"></div>
+          <div data-skill-logo="css"></div>
+          <div data-skill-logo="js"></div>
+          <div data-skill-logo="git"></div>
+          <div data-skill-logo="wp"></div>
+        </div>
+      </section>
+      <section class="projects-section">
+        <h2 class="max-width-1400 center">My Projects</h2>
+        <div class="projects-container | max-width-1400 center"></div>
+      </section>
+      <section class="get-in-touch | max-width-800 center padding-inline">
+        <h2>Get in Touch</h2>
+        <div class="get-in-touch__container | container">
+          <div class="contact-info__container | container flex-column">
+            <div class="contact-info">
+              <i
+                style="transform: rotateY(180deg)"
+                class="fa fa-solid fa-phone"
+              ></i
+              ><span class="contact-info--phone">+47 954 59 687</span>
             </div>
-        </section>
-        <section class="about-me | padding-inline">
-            <h2>About me</h2>
-            <div class="about-me__container | max-width-800">
-                <div class="about-me__descrp">
-                    <p>Hi! My name is Stian. I am a <b>Front-End Developer</b> with a passion for combining creativity and logic. I am a Norwegian <span id="my-age"></span>-year old, and i speak scandinavian languages and english fluently.</p>
-                    <p>I value teamwork and discipline above all else and I like to work with people who have the same interest in their work as i do, and love what they do as much as i do.</p>
-                    <p>As a developer i have an unquenchable thirst for knowledge and have a need for continously expanding my knowledge in my field. I like working with CSS and JS and have taken a interest in working with animations.</p>
-                    <button class="btn | clr-accent-cta"  data-scroll-To="contact">Get in Touch</button>
-                </div>
-                <div class="about-me__profile">
-                    <div class="clipped"></div>
-                    <!-- <img src="assets/profile-picture-blob.svg" alt=""> -->
-                </div>
+            <div class="contact-info">
+              <i class="fa fa-solid fa-envelope"></i
+              ><span class="contact-info--email">stordalstian@gmail.com</span>
             </div>
-            <div class="about-me__my-skills max-width-800 center section-space-top">
-                <div data-skill-logo="html"></div>
-                <div data-skill-logo="css"></div>
-                <div data-skill-logo="js"></div>
-                <div data-skill-logo="git"></div>
-                <div data-skill-logo="wp"></div>
+          </div>
+          <a href="https://github.com/StianSto" class="my-pages">
+            <div class="| container">
+              <img src="assets/icons/github.svg" alt="" />
+              <p>My Github</p>
             </div>
-        </section>
-        <section class="projects-section">
-            <h2 class="max-width-1400 center">My Projects</h2>
-            <div class="projects-container | max-width-1400 center"></div>
-        </section>
-        <section class="get-in-touch | max-width-800 center padding-inline">
-            <h2>Get in Touch</h2>
-            <div class="get-in-touch__container | container">
-                <div class="contact-info__container | container flex-column">
-                    <div class="contact-info"><i style="transform: rotateY(180deg)" class="fa fa-solid fa-phone"></i><span class="contact-info--phone">+47 954 59 687</span></div>
-                    <div class="contact-info "><i class="fa fa-solid fa-envelope"></i><span class="contact-info--email">stordalstian@gmail.com</span></div>
-                </div>
-                <a href="https://github.com/StianSto" class="my-pages">
-                    <div class="| container">
-                        <img src="assets/icons/git.svg" alt="">
-                        <p>My Github</p>
-                    </div>
-                </a>
-            </div>
-        </section>
+          </a>
+        </div>
+      </section>
+      <section id="contact">
+        <form method="POST" netlify>
+          <div class="form-control">
+            <label for="email">Your Email</label>
+            <input type="email" name="email" required />
+          </div>
+          <div class="form-control">
+            <label for="name">Your name</label>
+            <input type="text" name="name" required />
+          </div>
+          <div class="form-control">
+            <label for="message">Your message</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn clr-accent-cta">Send message</button>
+        </form>
+      </section>
     </main>
     <footer>
-        <p>&copy; copyright. All rights reserved</p>
+      <p>&copy; copyright. All rights reserved</p>
     </footer>
-</body>
+  </body>
 </html>
