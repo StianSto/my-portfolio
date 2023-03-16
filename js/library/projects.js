@@ -1,5 +1,5 @@
 // PROJECT TEMPLATE
-// add the project details in the template and add it project to the array at the bottom of the this file to display it on the site
+// add the project details in the template and add it project to the array at the bottom of the this file to display it on the site. try to have a description between 200-250 characters. dont forget to add images of both pc and mobile in assets/images
 
 // const myProject = {
 //   title: "my new project",
